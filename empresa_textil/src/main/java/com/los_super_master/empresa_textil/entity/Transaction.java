@@ -24,7 +24,9 @@ public class Transaction {
     @ManyToOne
     private Enterprise enterprise;
 
+    @CreatedDate
     private Date createdAd;
+    @LastModifiedDate
     private Date updateAd;
 
     public Transaction (){

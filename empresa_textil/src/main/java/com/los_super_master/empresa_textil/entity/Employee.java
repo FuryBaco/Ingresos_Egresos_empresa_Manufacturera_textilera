@@ -22,17 +22,23 @@ public class Employee {
     @ManyToOne
     private Enterprise enterprise;
 
+    @Enumerate (EnumType.STRING)
+    private Enum_RolName enum_rolName;
+
+    @LastModifiedDate
     private Date updateAt;
+    @CreatedDate
     private Date createdAt;
 
     public Employee(){
 
     }
 
-    public Employee(long id, String email, Enterprise enterprise, Date updateAt, Date createdAt) {
+    public Employee(long id, String email, Enterprise enterprise, Enum_RolName enum_rolName, Date updateAt, Date createdAt) {
         this.id = id;
         this.email = email;
         this.enterprise = enterprise;
+        this.enum_rolName = enum_rolName;
         this.updateAt = updateAt;
         this.createdAt = createdAt;
     }
@@ -75,5 +81,14 @@ public class Employee {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+
+    public Enum_RolName getEnum_rolName() {
+        return enum_rolName;
+    }
+
+    public void setEnum_rolName(Enum_RolName enum_rolName) {
+        this.enum_rolName = enum_rolName;
     }
 }
