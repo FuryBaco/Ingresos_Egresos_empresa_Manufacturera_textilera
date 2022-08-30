@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="473dfff0-33c2-4a02-b671-fd3649949227" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/target/classes/com/los_super_master/empresa_textil/EmpresaTextilApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/target/classes/com/los_super_master/empresa_textil/entity/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/target/classes/com/los_super_master/empresa_textil/entity/Enterprise.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/target/classes/com/los_super_master/empresa_textil/entity/Enum_RolName.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/target/classes/com/los_super_master/empresa_textil/entity/Profile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil/target/classes/com/los_super_master/empresa_textil/entity/Transaction.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1661892815" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="Jesus" />
+                    <option name="lastUsedInstant" value="1661891675" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="development" />
+                    <option name="lastUsedInstant" value="1661890787" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Dzfi2ihxSzYYGVimAmnFKDtyAN" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/MinTic/Programacion C3/Los_Super_Master_2/Ingresos_Egresos_empresa_Manufacturera_textilera/Ingresos_Egresos_empresa_Manufacturera_textilera/empresa_textil",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Ingresos_Egresos_empresa_Manufacturera_textilera" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Ingresos_Egresos_empresa_Manufacturera_textilera" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="473dfff0-33c2-4a02-b671-fd3649949227" name="Changes" comment="" />
+      <created>1661706957209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661706957209</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
