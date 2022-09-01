@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Table;
+import java.util.List;
 
 /*@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })*/
 @Entity
