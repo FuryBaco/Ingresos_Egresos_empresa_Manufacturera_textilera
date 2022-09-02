@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.Table;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+/*@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })*/
 @Entity
 @Table(name = "employee")
 public class Employee {

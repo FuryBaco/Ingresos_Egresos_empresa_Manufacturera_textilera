@@ -9,7 +9,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import javax.persistence.*;
 import java.util.Date;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+/*@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })*/
 @Entity
 @Table(name = "profile")
 public class Profile {

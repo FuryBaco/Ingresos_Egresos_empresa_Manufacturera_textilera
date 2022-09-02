@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+/*@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })*/
 @Entity
 @Table(name = "enterprise")
 public class Enterprise {
