@@ -1,7 +1,7 @@
 package com.MinTicCiclo_3.empresatextil.controller;
 
 import com.MinTicCiclo_3.empresatextil.entity.Employee;
-import com.MinTicCiclo_3.empresatextil.services.ServicioPrueba;
+import com.MinTicCiclo_3.empresatextil.services.EmployeeServ;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class TaskController {
+public class EmployeeControl {
     @Autowired
-    private ServicioPrueba servicioPrueba;
+    private EmployeeServ employeeServ;
+
     @GetMapping("/employee")
     public List<Employee> getEmployeeById() {
-        return servicioPrueba.getAllEmployees();
+
+        return employeeServ.getAllEmployees();
     }
 
 }
