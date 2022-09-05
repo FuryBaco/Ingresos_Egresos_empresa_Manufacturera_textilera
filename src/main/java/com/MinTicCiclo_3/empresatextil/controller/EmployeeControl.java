@@ -10,12 +10,13 @@ import java.util.List;
 
 @RestController
 public class EmployeeControl {
+
     @Autowired
     private EmployeeServ employeeServ;
 
+
     @GetMapping("/employee")
     public List<Employee> getEmployeeById() {
-
         return employeeServ.getAllEmployees();
     }
 

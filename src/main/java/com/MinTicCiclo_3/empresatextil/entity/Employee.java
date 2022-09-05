@@ -1,13 +1,9 @@
 package com.MinTicCiclo_3.empresatextil.entity;
 
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import javax.persistence.*;
 import java.util.Date;
-import javax.persistence.Table;
 import java.util.List;
 
 /*@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })*/
@@ -23,7 +19,7 @@ public class Employee {
     private String email;
 
     @OneToOne
-    @JoinColumn (name = "idProfile")
+    @JoinColumn(name = "idProfile")
     private Profile profile;
 
     @OneToMany(mappedBy = "employee")
@@ -33,7 +29,7 @@ public class Employee {
     @JoinColumn(name = "idEnterprise")
     private Enterprise enterprise;
 
-    @Enumerated (EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private Enum_RolName enum_rolName;
 
     @LastModifiedDate
@@ -41,7 +37,7 @@ public class Employee {
     @CreatedDate
     private Date createdAt;
 
-    public Employee(){
+    public Employee() {
 
     }
 
