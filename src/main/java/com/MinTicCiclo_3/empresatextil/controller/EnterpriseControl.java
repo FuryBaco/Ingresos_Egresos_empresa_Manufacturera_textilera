@@ -3,10 +3,7 @@ package com.MinTicCiclo_3.empresatextil.controller;
 import com.MinTicCiclo_3.empresatextil.entity.Enterprise;
 import com.MinTicCiclo_3.empresatextil.services.EnterpriseServ;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,6 +20,16 @@ public class EnterpriseControl {
 
     @PostMapping("/enterprise")
     public Enterprise createEnterprise(@RequestBody Enterprise enterprise) {
+        return enterpriseServ.createEnterprise(enterprise);
+    }
+
+    @DeleteMapping("/enterprise/{id}")
+    public void deleteEnterprise(@PathVariable Long id) {
+        enterpriseServ.deleteEnterprise(id);
+    }
+
+    @PutMapping("/enterprise")
+    public Enterprise updateEnterprise(@RequestBody Enterprise enterprise) {
         return enterpriseServ.createEnterprise(enterprise);
     }
 

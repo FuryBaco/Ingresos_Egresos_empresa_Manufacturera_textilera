@@ -30,4 +30,9 @@ public class EmployeeServ {
     public Employee createEmployee(Employee newEmployee) {
         return this.employeeRepo.save(newEmployee);
     }
+
+    public void deleteEmployee(Long idEmployee) {
+        this.employeeRepo.deleteById(idEmployee);
+    }
+
 }

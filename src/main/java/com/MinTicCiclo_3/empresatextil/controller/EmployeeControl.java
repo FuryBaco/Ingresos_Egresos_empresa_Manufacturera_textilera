@@ -3,10 +3,7 @@ package com.MinTicCiclo_3.empresatextil.controller;
 import com.MinTicCiclo_3.empresatextil.entity.Employee;
 import com.MinTicCiclo_3.empresatextil.services.EmployeeServ;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +21,16 @@ public class EmployeeControl {
 
     @PostMapping("/employee")
     public Employee createEmployee(@RequestBody Employee employee) {
+        return employeeServ.createEmployee(employee);
+    }
+
+    @DeleteMapping("/employee/{id}")
+    public void deleteEmployee(@PathVariable Long id) {
+        employeeServ.deleteEmployee(id);
+    }
+
+    @PutMapping("/employee")
+    public Employee updateEmployee(@RequestBody Employee employee) {
         return employeeServ.createEmployee(employee);
     }
 

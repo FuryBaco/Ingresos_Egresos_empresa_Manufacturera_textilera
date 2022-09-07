@@ -31,4 +31,8 @@ public class TransactionServ {
     public Transaction createTransaction(Transaction newTransaction) {
         return this.transactionRepo.save(newTransaction);
     }
+
+    public void deleteTransaction(Long idTransaction) {
+        this.transactionRepo.deleteById(idTransaction);
+    }
 }

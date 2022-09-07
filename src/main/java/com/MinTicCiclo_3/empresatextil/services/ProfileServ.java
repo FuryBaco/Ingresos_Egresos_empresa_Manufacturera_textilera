@@ -28,6 +28,11 @@ public class ProfileServ {
     }
 
     public Profile createProfile(Profile newProfile) {
+
         return this.profileRepo.save(newProfile);
+    }
+
+    public void deleteProfile(Long idProfile) {
+        this.profileRepo.deleteById(idProfile);
     }
 }

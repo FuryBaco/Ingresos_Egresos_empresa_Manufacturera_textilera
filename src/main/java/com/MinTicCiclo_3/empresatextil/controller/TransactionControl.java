@@ -3,10 +3,7 @@ package com.MinTicCiclo_3.empresatextil.controller;
 import com.MinTicCiclo_3.empresatextil.entity.Transaction;
 import com.MinTicCiclo_3.empresatextil.services.TransactionServ;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,6 +20,16 @@ public class TransactionControl {
 
     @PostMapping("/transaction")
     public Transaction createTransaction(@RequestBody Transaction transaction) {
+        return transactionServ.createTransaction(transaction);
+    }
+
+    @DeleteMapping("/transaction/{id}")
+    public void deleteTransaction(@PathVariable Long id) {
+        transactionServ.deleteTransaction(id);
+    }
+
+    @PutMapping("/transaction")
+    public Transaction updateTransaction(@RequestBody Transaction transaction) {
         return transactionServ.createTransaction(transaction);
     }
 
