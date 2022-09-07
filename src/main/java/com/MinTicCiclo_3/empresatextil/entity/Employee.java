@@ -1,13 +1,24 @@
 package com.MinTicCiclo_3.empresatextil.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
 /*@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })*/
 @Entity
+@EntityListeners(AuditingEntityListener.class)
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "employee")
 public class Employee {
 
@@ -33,87 +44,9 @@ public class Employee {
     private Enum_RolName enum_rolName;
 
     @LastModifiedDate
-    private Date updateAt;
+    private Date updateAt = new Date();
     @CreatedDate
-    private Date createdAt;
+    private Date createdAt = new Date();
 
-    public Employee() {
-
-    }
-
-    public Employee(long idEmployee, String email, Profile profile, List<Transaction> transaction, Enterprise enterprise, Enum_RolName enum_rolName, Date updateAt, Date createdAt) {
-        this.idEmployee = idEmployee;
-        this.email = email;
-        this.profile = profile;
-        this.transaction = transaction;
-        this.enterprise = enterprise;
-        this.enum_rolName = enum_rolName;
-        this.updateAt = updateAt;
-        this.createdAt = createdAt;
-    }
-
-    public long getIdEmployee() {
-        return idEmployee;
-    }
-
-    public void setIdEmployee(long idEmployee) {
-        this.idEmployee = idEmployee;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Profile getProfile() {
-        return profile;
-    }
-
-    public void setProfile(Profile profile) {
-        this.profile = profile;
-    }
-
-    public List<Transaction> getTransaction() {
-        return transaction;
-    }
-
-    public void setTransaction(List<Transaction> transaction) {
-        this.transaction = transaction;
-    }
-
-    public Enterprise getEnterprise() {
-        return enterprise;
-    }
-
-    public void setEnterprise(Enterprise enterprise) {
-        this.enterprise = enterprise;
-    }
-
-    public Enum_RolName getEnum_rolName() {
-        return enum_rolName;
-    }
-
-    public void setEnum_rolName(Enum_RolName enum_rolName) {
-        this.enum_rolName = enum_rolName;
-    }
-
-    public Date getUpdateAt() {
-        return updateAt;
-    }
-
-    public void setUpdateAt(Date updateAt) {
-        this.updateAt = updateAt;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
 }
 

@@ -28,4 +28,8 @@ public class EnterpriseServ {
         }
         return opcionalEnterprise.get();
     }
+
+    public Enterprise createEnterprise(Enterprise newEnterprise) {
+        return this.enterpriseRepo.save(newEnterprise);
+    }
 }

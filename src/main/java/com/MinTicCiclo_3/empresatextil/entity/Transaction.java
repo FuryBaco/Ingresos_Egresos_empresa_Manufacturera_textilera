@@ -1,15 +1,23 @@
 package com.MinTicCiclo_3.empresatextil.entity;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.util.Date;
 
 /*@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })*/
 @Entity
+@EntityListeners(AuditingEntityListener.class)
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "transaction")
 public class Transaction {
 
@@ -28,79 +36,10 @@ public class Transaction {
     @JoinColumn(name = "idEnterprise")
     private Enterprise enterprise;
 
-    @CreatedDate
-    private Date createdAd;
     @LastModifiedDate
-    private Date updateAd;
+    private Date updateAt = new Date();
+    @CreatedDate
+    private Date createdAt = new Date();
 
-    public Transaction (){
-
-    }
-
-    public Transaction(long idTransaction, String concept, float amount, Employee employee, Enterprise enterprise, Date createdAd, Date updateAd) {
-        this.idTransaction = idTransaction;
-        this.concept = concept;
-        this.amount = amount;
-        this.employee = employee;
-        this.enterprise = enterprise;
-        this.createdAd = createdAd;
-        this.updateAd = updateAd;
-    }
-
-    public long getIdTransaction() {
-        return idTransaction;
-    }
-
-    public void setIdTransaction(long idTransaction) {
-        this.idTransaction = idTransaction;
-    }
-
-    public String getConcept() {
-        return concept;
-    }
-
-    public void setConcept(String concept) {
-        this.concept = concept;
-    }
-
-    public float getAmount() {
-        return amount;
-    }
-
-    public void setAmount(float amount) {
-        this.amount = amount;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-
-    public Enterprise getEnterprise() {
-        return enterprise;
-    }
-
-    public void setEnterprise(Enterprise enterprise) {
-        this.enterprise = enterprise;
-    }
-
-    public Date getCreatedAd() {
-        return createdAd;
-    }
-
-    public void setCreatedAd(Date createdAd) {
-        this.createdAd = createdAd;
-    }
-
-    public Date getUpdateAd() {
-        return updateAd;
-    }
-
-    public void setUpdateAd(Date updateAd) {
-        this.updateAd = updateAd;
-    }
 }
 

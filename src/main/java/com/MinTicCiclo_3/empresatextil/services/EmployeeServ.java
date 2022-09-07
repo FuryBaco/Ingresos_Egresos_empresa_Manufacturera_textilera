@@ -26,4 +26,8 @@ public class EmployeeServ {
         }
         return opcionalEmployee.get();
     }
+
+    public Employee createEmployee(Employee newEmployee) {
+        return this.employeeRepo.save(newEmployee);
+    }
 }

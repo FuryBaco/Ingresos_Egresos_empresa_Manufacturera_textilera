@@ -4,6 +4,8 @@ import com.MinTicCiclo_3.empresatextil.entity.Employee;
 import com.MinTicCiclo_3.empresatextil.services.EmployeeServ;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -18,6 +20,11 @@ public class EmployeeControl {
     @GetMapping("/employee")
     public List<Employee> getEmployeeById() {
         return employeeServ.getAllEmployees();
+    }
+
+    @PostMapping("/employee")
+    public Employee createEmployee(@RequestBody Employee employee) {
+        return employeeServ.createEmployee(employee);
     }
 
 }

@@ -1,8 +1,6 @@
 package com.MinTicCiclo_3.empresatextil.services;
 
-import com.MinTicCiclo_3.empresatextil.entity.Employee;
 import com.MinTicCiclo_3.empresatextil.entity.Profile;
-import com.MinTicCiclo_3.empresatextil.repositories.EmployeeRepo;
 import com.MinTicCiclo_3.empresatextil.repositories.ProfileRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,10 +20,14 @@ public class ProfileServ {
 
     public Profile getProfileById(Long idProfile) {
 
-        Optional<Profile> opcionalProfile =  this.profileRepo.findById(idProfile);
-        if (opcionalProfile.isEmpty() ) {
+        Optional<Profile> opcionalProfile = this.profileRepo.findById(idProfile);
+        if (opcionalProfile.isEmpty()) {
             return null;
         }
         return opcionalProfile.get();
+    }
+
+    public Profile createProfile(Profile newProfile) {
+        return this.profileRepo.save(newProfile);
     }
 }

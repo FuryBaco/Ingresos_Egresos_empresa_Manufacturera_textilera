@@ -27,4 +27,8 @@ public class TransactionServ {
         }
         return opcionalTransaction.get();
     }
+
+    public Transaction createTransaction(Transaction newTransaction) {
+        return this.transactionRepo.save(newTransaction);
+    }
 }

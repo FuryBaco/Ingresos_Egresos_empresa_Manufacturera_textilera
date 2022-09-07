@@ -1,15 +1,23 @@
 package com.MinTicCiclo_3.empresatextil.entity;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.util.Date;
 
 /*@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })*/
 @Entity
+@EntityListeners(AuditingEntityListener.class)
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "profile")
 public class Profile {
 
@@ -18,75 +26,16 @@ public class Profile {
     private long idProfile;
 
     private String image;
-    private String phone ;
+    private String phone;
 
-    @OneToOne (mappedBy = "profile")
+    @OneToOne(mappedBy = "profile")
     private Employee employee;
 
     @LastModifiedDate
-    private Date updateAt;
+    private Date updateAt = new Date();
     @CreatedDate
-    private Date createdAt;
+    private Date createdAt = new Date();
 
-    public Profile(){
 
-    }
-
-    public Profile(long idProfile, String image, String phone, Employee employee, Date updateAt, Date createdAt) {
-        this.idProfile = idProfile;
-        this.image = image;
-        this.phone = phone;
-        this.employee = employee;
-        this.updateAt = updateAt;
-        this.createdAt = createdAt;
-    }
-
-    public long getIdProfile() {
-        return idProfile;
-    }
-
-    public void setIdProfile(long idProfile) {
-        this.idProfile = idProfile;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-
-    public Date getUpdateAt() {
-        return updateAt;
-    }
-
-    public void setUpdateAt(Date updateAt) {
-        this.updateAt = updateAt;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
 }
 
