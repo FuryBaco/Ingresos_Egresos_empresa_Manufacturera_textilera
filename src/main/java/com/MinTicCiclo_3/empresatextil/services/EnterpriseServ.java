@@ -18,8 +18,7 @@ public class EnterpriseServ {
 		return (List<Enterprise>) this.enterpriseRepo.findAll();
 	}
 
-	public Enterprise getEmployeeById(Long idEnterprise) {
-
+	public Enterprise getEnterpriseById(Long idEnterprise) {
 		Optional<Enterprise> opcionalEnterprise = this.enterpriseRepo.findById(idEnterprise);
 		if (opcionalEnterprise.isEmpty()) {
 			return null;
@@ -35,4 +34,6 @@ public class EnterpriseServ {
 	public void deleteEnterprise(Long idEnterprise) {
 		this.enterpriseRepo.deleteById(idEnterprise);
 	}
+
+
 }

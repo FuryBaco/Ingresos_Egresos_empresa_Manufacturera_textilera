@@ -33,4 +33,9 @@ public class ProfileControl {
         return profileServ.createProfile(profile);
     }
 
+    @GetMapping("/profile/{id}")
+    public Profile getProfileById(@PathVariable Long id) {
+        return profileServ.getProfileById(id);
+    }
+
 }

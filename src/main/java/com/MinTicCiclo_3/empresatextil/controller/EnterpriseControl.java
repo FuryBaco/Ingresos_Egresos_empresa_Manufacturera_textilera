@@ -33,4 +33,9 @@ public class EnterpriseControl {
         return enterpriseServ.createEnterprise(enterprise);
     }
 
+    @GetMapping("/enterprise/{id}")
+    public Enterprise getEnterpriseById(@PathVariable Long id) {
+        return enterpriseServ.getEnterpriseById(id);
+    }
+
 }

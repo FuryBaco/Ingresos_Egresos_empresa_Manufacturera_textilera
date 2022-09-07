@@ -33,4 +33,9 @@ public class TransactionControl {
         return transactionServ.createTransaction(transaction);
     }
 
+    @GetMapping("/transaction/{id}")
+    public Transaction getTransactionById(@PathVariable Long id) {
+        return transactionServ.getTransactionById(id);
+    }
+
 }

@@ -35,4 +35,9 @@ public class TransactionServ {
     public void deleteTransaction(Long idTransaction) {
         this.transactionRepo.deleteById(idTransaction);
     }
+
+
+    /*public List<Transaction> getAllTransactionsByEnterpriseId(Long idEnterprise) {
+        return this.transactionRepo.findAllById();
+    }*/
 }

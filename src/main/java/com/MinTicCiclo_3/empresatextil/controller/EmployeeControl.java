@@ -34,4 +34,13 @@ public class EmployeeControl {
         return employeeServ.createEmployee(employee);
     }
 
+    @GetMapping("/employee/{id}")
+    public Employee getEmployeeById(@PathVariable Long id) {
+        return employeeServ.getEmployeeById(id);
+    }
+
+
+
+
+
 }
