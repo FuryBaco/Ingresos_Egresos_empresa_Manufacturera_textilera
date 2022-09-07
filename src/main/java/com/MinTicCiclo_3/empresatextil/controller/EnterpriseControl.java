@@ -38,4 +38,9 @@ public class EnterpriseControl {
         return enterpriseServ.getEnterpriseById(id);
     }
 
+    @PatchMapping("/enterprise/{id}")
+    public Enterprise updateEnterprise(@PathVariable Long id, @RequestBody Enterprise enterprise) {
+        return enterpriseServ.createEnterprise(enterprise);
+    }
+
 }

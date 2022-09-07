@@ -40,7 +40,10 @@ public class EmployeeControl {
     }
 
 
-
+    @PatchMapping("/employee/{id}")
+    public Employee updateEmployee(@PathVariable Long id, @RequestBody Employee employee) {
+        return employeeServ.createEmployee(employee);
+    }
 
 
 }

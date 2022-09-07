@@ -35,7 +35,13 @@ public class ProfileControl {
 
     @GetMapping("/profile/{id}")
     public Profile getProfileById(@PathVariable Long id) {
+
         return profileServ.getProfileById(id);
+    }
+
+    @PatchMapping("/profile/{id}")
+    public Profile updateProfile(@PathVariable Long id, @RequestBody Profile profile) {
+        return profileServ.createProfile(profile);
     }
 
 }

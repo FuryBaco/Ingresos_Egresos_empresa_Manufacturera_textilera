@@ -38,4 +38,9 @@ public class TransactionControl {
         return transactionServ.getTransactionById(id);
     }
 
+    @PatchMapping("/transaction/{id}")
+    public Transaction updateTransaction(@PathVariable Long id, @RequestBody Transaction transaction) {
+        return transactionServ.createTransaction(transaction);
+    }
+
 }
