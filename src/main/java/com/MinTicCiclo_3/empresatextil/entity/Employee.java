@@ -15,7 +15,6 @@ import java.util.List;
 /*@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })*/
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-@Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,9 +22,11 @@ import java.util.List;
 public class Employee {
 
     @Id
+    @Getter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idEmployee;
 
+    @Getter
     @Column(name = "email", unique = true)
     private String email;
 
@@ -36,15 +37,20 @@ public class Employee {
     @OneToMany(mappedBy = "employee")
     private List<Transaction> transaction;
 
+    @Getter
     @ManyToOne
     @JoinColumn(name = "idEnterprise")
     private Enterprise enterprise;
 
+
+    @Getter
     @Enumerated(EnumType.STRING)
     private Enum_RolName enum_rolName;
 
+    @Getter
     @LastModifiedDate
     private Date updateAt = new Date();
+    @Getter
     @CreatedDate
     private Date createdAt = new Date();
 

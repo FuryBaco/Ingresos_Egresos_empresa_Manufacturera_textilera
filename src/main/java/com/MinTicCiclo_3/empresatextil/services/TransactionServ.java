@@ -4,6 +4,7 @@ package com.MinTicCiclo_3.empresatextil.services;
 import com.MinTicCiclo_3.empresatextil.entity.Transaction;
 import com.MinTicCiclo_3.empresatextil.repositories.TransactionRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,12 @@ public class TransactionServ {
 
         return (List<Transaction>) this.transactionRepo.findAll();
     }
+
+    //find all transactions by enterprise id
+    /*public List<Transaction> getAllTransactionsByEnterpriseId(Long idEnterprise) {
+
+        return (List<Transaction>) this.transactionRepo.findAllById(idEnterprise);
+    }*/
 
     public Transaction getTransactionById(Long idTransaction) {
 
@@ -37,7 +44,8 @@ public class TransactionServ {
     }
 
 
-    /*public List<Transaction> getAllTransactionsByEnterpriseId(Long idEnterprise) {
-        return this.transactionRepo.findAllById();
-    }*/
+    public List<Transaction> getAllTransactionsByenterprise(Long idEnterprise) {
+        return this.transactionRepo.findAllTransactionsByenterprise(idEnterprise);
+    }
+
 }

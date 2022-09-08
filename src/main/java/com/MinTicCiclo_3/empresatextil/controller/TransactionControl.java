@@ -13,7 +13,7 @@ public class TransactionControl {
     private TransactionServ transactionServ;
 
     @GetMapping("/transaction")
-    public List<Transaction> getTransactionById() {
+    public List<Transaction> getAllTransactions() {
 
         return transactionServ.getAllTransactions();
     }
@@ -41,6 +41,11 @@ public class TransactionControl {
     @PatchMapping("/transaction/{id}")
     public Transaction updateTransaction(@PathVariable Long id, @RequestBody Transaction transaction) {
         return transactionServ.createTransaction(transaction);
+    }
+
+    @GetMapping("/enterprise/{id}/transaction")
+    public List<Transaction> getTransactionByenterprise(@PathVariable Long id) {
+        return transactionServ.getAllTransactionsByenterprise(id);
     }
 
 }

@@ -13,7 +13,7 @@ public class ProfileControl {
     private ProfileServ profileServ;
 
     @GetMapping("/profile")
-    public List<Profile> getProfileById() {
+    public List<Profile> getAllProfiles() {
 
         return profileServ.getAllProfiles();
     }

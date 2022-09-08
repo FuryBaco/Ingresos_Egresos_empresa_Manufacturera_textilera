@@ -13,7 +13,7 @@ public class EnterpriseControl {
     private EnterpriseServ enterpriseServ;
 
     @GetMapping("/enterprise")
-    public List<Enterprise> getEnterpriseById() {
+    public List<Enterprise> getAllEnterprises() {
 
         return enterpriseServ.getAllEnterprises();
     }

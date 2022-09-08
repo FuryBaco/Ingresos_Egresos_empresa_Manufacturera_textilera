@@ -5,6 +5,7 @@ import com.MinTicCiclo_3.empresatextil.repositories.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,8 +15,7 @@ public class EmployeeServ {
     private EmployeeRepo employeeRepo;
 
     public List<Employee> getAllEmployees() {
-
-        return (List<Employee>) this.employeeRepo.findAll();
+        return new ArrayList<>(employeeRepo.findAll());
     }
 
     public Employee getEmployeeById(Long idEmployee) {
