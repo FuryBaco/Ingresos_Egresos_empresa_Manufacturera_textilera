@@ -23,7 +23,7 @@ public class TransactionControl {
         return transactionServ.createTransaction(transaction);
     }
 
-    @DeleteMapping("/transaction/{id}")
+    @DeleteMapping("/enterprise/{id}/transaction")
     public void deleteTransaction(@PathVariable Long id) {
         transactionServ.deleteTransaction(id);
     }
@@ -38,7 +38,7 @@ public class TransactionControl {
         return transactionServ.getTransactionById(id);
     }
 
-    @PatchMapping("/transaction/{id}")
+    @PatchMapping("/enterprise/{id}/transaction")
     public Transaction updateTransaction(@PathVariable Long id, @RequestBody Transaction transaction) {
         return transactionServ.createTransaction(transaction);
     }
@@ -47,5 +47,6 @@ public class TransactionControl {
     public List<Transaction> getTransactionByenterprise(@PathVariable Long id) {
         return transactionServ.getAllTransactionsByenterprise(id);
     }
+
 
 }
