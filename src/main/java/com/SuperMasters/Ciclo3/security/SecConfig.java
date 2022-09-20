@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
-public class SecConfig  extends WebSecurityConfigurerAdapter {
+public class SecConfig  extends WebSecurityConfigurerAdapter{
 
 	@Autowired
 	CustomHandler customHandler;
@@ -47,6 +47,7 @@ public class SecConfig  extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 				.antMatchers("/empresas**").hasRole("ADMIN")
 				.antMatchers("/empleados**").hasRole("ADMIN")
+				.antMatchers("/","/index","/webpublico").authenticated()
 				.antMatchers("/movimientos**").hasAnyRole("ADMIN","USER")
 				.and()
 				.formLogin().successHandler(customHandler)
